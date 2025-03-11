@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="calculator-display">
+                <div class="previous-operand" id="previous-operand"></div>
+                <div class="current-operand" id="current-operand">0</div>
+            </div>
+            
+            <div class="mode-toggle">
+                <button id="basic-mode" class="mode-btn active">Basic</button>
+                <button id="scientific-mode" class="mode-btn">Scientific</button>
+            </div>
+            
+            <div class="calculator-buttons basic-mode-buttons">
+                <button class="operation" data-action="clear">AC</button>
+                <button class="operation" data-action="delete">DEL</button>
+                <button class="operation" data-action="%">%</button>
+                <button class="operation" data-action="÷">÷</button>
+                
+                <button class="number" data-number="7">7</button>
+                <button class="number" data-number="8">8</button>
+                <button class="number" data-number="9">9</button>
+                <button class="operation" data-action="×">×</button>
+                
+                <button class="number" data-number="4">4</button>
+                <button class="number" data-number="5">5</button>
+                <button class="number" data-number="6">6</button>
+                <button class="operation" data-action="-">-</button>
+                
+                <button class="number" data-number="1">1</button>
+                <button class="number" data-number="2">2</button>
+                <button class="number" data-number="3">3</button>
+                <button class="operation" data-action="+">+</button>
+                
+                <button class="number" data-number="0">0</button>
+                <button class="number" data-number=".">.</button>
+                <button class="operation equal-sign" data-action="=">=</button>
+            </div>
+            
+            <div class="calculator-buttons scientific-mode-buttons hidden">
+                <!-- First Row -->
+                <button class="operation" data-action="clear">AC</button>
+                <button class="operation" data-action="delete">DEL</button>
+                <button class="operation" data-action="(">(</button>
+                <button class="operation" data-action=")">)</button>
+                <button class="operation" data-action="%">%</button>
+                
+                <!-- Second Row -->
+                <button class="operation" data-action="sin">sin</button>
+                <button class="operation" data-action="cos">cos</button>
+                <button class="operation" data-action="tan">tan</button>
+                <button class="operation" data-action="π">π</button>
+                <button class="operation" data-action="÷">÷</button>
+                
+                <!-- Third Row -->
+                <button class="operation" data-action="asin">asin</button>
+                <button class="operation" data-action="acos">acos</button>
+                <button class="operation" data-action="atan">atan</button>
+                <button class="operation" data-action="e">e</button>
+                <button class="operation" data-action="×">×</button>
+                
+                <!-- Fourth Row -->
+                <button class="operation" data-action="ln">ln</button>
+                <button class="operation" data-action="log">log</button>
+                <button class="number" data-number="7">7</button>
+                <button class="number" data-number="8">8</button>
+                <button class="number" data-number="9">9</button>
+                
+                <!-- Fifth Row -->
+                <button class="operation" data-action="√">√</button>
+                <button class="operation" data-action="x²">x²</button>
+                <button class="number" data-number="4">4</button>
+                <button class="number" data-number="5">5</button>
+                <button class="number" data-number="6">6</button>
+                
+                <!-- Sixth Row -->
+                <button class="operation" data-action="xʸ">xʸ</button>
+                <button class="operation" data-action="10ˣ">10ˣ</button>
+                <button class="number" data-number="1">1</button>
+                <button class="number" data-number="2">2</button>
+                <button class="number" data-number="3">3</button>
+                
+                <!-- Seventh Row -->
+                <button class="operation" data-action="rad">RAD</button>
+                <button class="operation" data-action="deg">DEG</button>
+                <button class="number" data-number="0">0</button>
+                <button class="number" data-number=".">.</button>
+                <button class="operation equal-sign" data-action="=">=</button>
+            </div>
+        </div>
+        <div class="calculator-history">
+            <h3>Calculation History</h3>
+            <ul id="history-list"></ul>
+            <button id="clear-history">Clear History</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
